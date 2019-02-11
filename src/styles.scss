@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.4rem;
+  background-image: url(https://i.pinimg.com/originals/c7/af/ab/c7afab63cd23e66196964c56e723f2cc.jpg);
+  background-repeat: repeat;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    margin: 10rem auto;
+    max-width: 80rem;
+    box-shadow: 0 0 1.5rem black;
+  }
+}
+
+.container {
+  @media screen and (min-width: 768px) {
+    padding: 0 5rem;
+  }
+}
+
+.header {
+  background: #000000;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 3rem 0;
+    }
+  }
+
+  &__profileName {
+    color: #ffffff;
+  }
+
+  &__logo {
+    width: 14rem;
+    height: 14rem;
+    background-image: url("https://yt3.ggpht.com/a-/AN66SAxiO9o_NvvIsV0gmgnUzCexgbvL7CNDYO6TYQ=s900-mo-c-c0xffffffff-rj-k-no");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.main {
+  background: #fafafa;
+
+  &__inner {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__info {
+    background-color: #dedede;
+    padding: 2rem;
+
+    @media screen and (min-width: 768px) {
+      position: relative;
+      min-width: 25rem;
+      transform: translateY(-5rem);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 5rem;
+        background-color: #dedede;
+      }
+    }
+  }
+
+  &__avatar {
+    background-image: url(https://cdn.dribbble.com/users/199982/screenshots/4044699/furkan-avatar-dribbble.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 0.5rem solid white;
+    box-shadow: 0 0 0.5rem black;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+
+  &__contact,
+  &__socialMedia,
+  &__education,
+  &__profile,
+  &__skills,
+  &__experience {
+    padding: 1rem 0;
+  }
+
+  &__contact {
+    p:nth-child(even) {
+      margin-top: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__socialMedia {
+    p {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__education {
+    p {
+      text-transform: uppercase;
+
+      &:nth-child(2) {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__profile {
+  }
+
+  &__skills {
+    ul {
+      padding-left: 2rem;
+      column-count: 2;
+
+      li {
+        font-size: 2rem;
+
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &__experience {
+    p:nth-child(3n-1) {
+      font-weight: 600;
+    }
+
+    p:nth-child(3n + 1) {
+      padding: 1rem 0;
+    }
+  }
+
+  &__content {
+    padding: 2rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 2rem 0 2rem 2rem;
+    }
+  }
+}
